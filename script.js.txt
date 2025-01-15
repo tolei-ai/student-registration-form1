@@ -1,0 +1,12 @@
+function register() {
+    const name = document.getElementById("name").value;
+    const studentId = document.getElementById("student-id").value;
+    const units = Array.from(document.getElementById("units").selectedOptions).map(option => option.text);
+
+    if (!name || !studentId || units.length === 0) {
+        alert("Please fill all fields and select at least one unit.");
+        return;
+    }
+
+    alert(`Registration Successful!\nName: ${name}\nID: ${studentId}\nUnits: ${units.join(", ")}`);
+}
